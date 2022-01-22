@@ -1,0 +1,23 @@
+.row {
+    height: auto;
+    padding: 10px 30px;
+    border-bottom: 1px solid #E4E4E4;
+    width: 100%;
+    display: flex;
+}
+
+.detail-top {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: normal;
+    color: #7E7F9A;
+}
+
+.detail {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: normal;
+    color: #474847;
+}

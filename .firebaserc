@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "wakanow-272c5": {
+      "hosting": {
+        "SPA": [
+          "wakanow-272c5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "wakanow-272c5"
+  }
+}

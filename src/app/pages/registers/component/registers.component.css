@@ -1,0 +1,33 @@
+.full-page>.content {
+    padding-top: 15vh;
+}
+
+.full-page>.content,
+.full-page>.footer {
+    position: relative;
+    z-index: 4;
+}
+
+.wrapper .content {
+    padding-bottom: 13vh;
+}
+
+.card .card-header:not([data-background-color]) {
+    background-color: transparent;
+}
+
+.card .card-header {
+    padding: 15px 15px 0;
+    border: 0;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}

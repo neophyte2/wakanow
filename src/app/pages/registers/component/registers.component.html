@@ -1,0 +1,112 @@
+<div class="wrapper wrapper-full-page " style="background-color: #f4f3ee;">
+    <div class="full-page section-image">
+        <div class="content">
+            <div class="container">
+                <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                    <form [formGroup]="registerForm" class="form" method="" action="">
+                        <div class="card card-login">
+                            <div class="card-header ">
+                                <div class="card-header ">
+                                    <h3 class="header text-center">SIGNUP</h3>
+                                </div>
+                            </div>
+                            <div class="card-body ">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-single-02"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" formControlName="firstname" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="mt-2" *ngIf="(rf.firstname.dirty || rf.firstname.touched) && rf.firstname.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="rf.firstname.errors">
+                                        First Name is required.
+                                    </span>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-single-02"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" formControlName="lastname" placeholder="Last Name" class="form-control">
+                                </div>
+                                <div class="mt-2" *ngIf="(rf.lastname.dirty || rf.lastname.touched) && rf.lastname.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="rf.lastname.errors">
+                                        Last Name is required.
+                                    </span>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-book-bookmark"></i>
+                                        </span>
+                                    </div>
+                                    <input type="tel" formControlName="phone" placeholder="Phone Number" class="form-control">
+                                </div>
+                                <div class="mt-2" *ngIf="(rf.phone.dirty || rf.phone.touched) && rf.phone.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="rf.phone.errors">
+                                        Phone Number is required.
+                                    </span>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-email-85"></i>
+                                        </span>
+                                    </div>
+                                    <input type="email" formControlName="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="mt-2" *ngIf="(rf.email.dirty || rf.email.touched) && rf.email.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="rf.email.errors">
+                                        Email is invalid.
+                                    </span>
+                                </div>
+                                <div *ngIf="!id" class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-key-25"></i>
+                                        </span>
+                                    </div>
+                                    <input type="password" formControlName="password" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="mt-2" *ngIf="(rf.password.dirty || rf.password.touched) && rf.password.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="rf.password.errors">
+                                        Password is required.
+                                    </span>
+                                </div>
+                                <div *ngIf="!id" class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-key-25"></i>
+                                        </span>
+                                    </div>
+                                    <input type="password" formControlName="confirmPass" placeholder="Confirm Password" class="form-control">
+                                </div>
+                                <span id="matchPassworError" class="text-danger" *ngIf="matchPassword">
+                                    Password Does Not Match
+                                </span>
+                                <div class="mt-2" *ngIf="(rf.confirmPass.dirty || rf.confirmPass.touched) && rf.confirmPass.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="rf.confirmPass.errors">
+                                        Confirm Number is required.
+                                    </span>
+                                </div>
+                                <br />
+                            </div>
+                            <div class="card-footer ">
+                                <button *ngIf="!id" [disabled]="(registerForm.invalid || disableBtn) || btnLoading" (click)="signUp()" class="btn btn-warning btn-round btn-block mb-3">
+                                    Submit <span *ngIf="btnLoading"><i class="fa fa-spinner fa-spin"></i></span>
+                                </button>
+                                <button *ngIf="id" [disabled]="registerForm.invalid ||  updateBtnLoading" (click)="updateSignUp()" class="btn btn-info btn-round btn-block mb-3">
+                                    Update <span *ngIf="btnLoading"><i class="fa fa-spinner fa-spin"></i></span>
+                                </button>
+                                <p>Would you like to view the <a [routerLink]="['/users/']">USERLIST TABLE</a> or the <a [routerLink]="['/reqres-table/']">REQRES USERLIST TABLE</a> ?</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
