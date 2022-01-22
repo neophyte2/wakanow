@@ -1,4 +1,5 @@
 export const environment = {
+  reqres: `https://reqres.in/`,
   firebase: {
     projectId: 'wakanow-272c5',
     appId: '1:753037850155:web:2d8f9b8680364cee5f9c6e',
